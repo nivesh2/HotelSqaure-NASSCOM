@@ -5,6 +5,7 @@
     var obj;
     var url_obj = {};
     var url_flag = true;
+    var enter_pressed=false;
 
 
 
@@ -156,23 +157,24 @@
 
     });
     $input.change(function() {
-        console.log('text changed ' + $(this).val());
+        console.log('text changed ');
         $('.target').val($(this).val());
         target = ($(this).val());
 
-        getsearch();
-        //  $(".scroll").click();
-
+        if(enter_pressed==true){
+            getsearch();
+        }
+        
     });
 
-    // $input.keydown(function(event) {
-    //     var key = event.keyCode;
-    //     console.log('KeyCode: ' + key);
-    //     if (key == 13) {
-    //         console.log("keycode enter pressed")
-    //         $input.change();
-    //     }
-    // });
+    $input.keydown(function(event) {
+        var key = event.keyCode;
+        console.log('KeyCode: ' + key);
+        if (key == 13) {
+            console.log("keycode enter pressed")
+            enter_pressed=true;
+        }
+    });
 
     $('.search-button').click(function() {
         console.log('button clicked');
@@ -450,6 +452,8 @@
 
                 NProgress.done();
         }
+        
+        enter_pressed=false;
     };
 
 
