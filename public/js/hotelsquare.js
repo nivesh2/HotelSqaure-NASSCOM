@@ -307,8 +307,8 @@
 
                         result += '<a class="list-group-item"><abbr title="city"><i class="glyphicon glyphicon-map-marker text-danger"></i></abbr><small> ' + item.city + '</small></a>';
                         result += '<a class="list-group-item"><abbr title="state"><i class="glyphicon glyphicon-map-marker text-danger"></i></abbr><small> ' + item.state + '</small></a>';
-                        result += '<a class="list-group-item"><abbr title="Type"><i class="glyphicon glyphicon-tag text-danger"></i></abbr><small> ' + item.type + '</small></a>';
-                        result += '<a class="list-group-item"><abbr title="region"><i class="glyphicon glyphicon-glass text-danger"></i></abbr><small> ' + item.region + ' region</small></a>';
+                        result += '<a class="list-group-item"><abbr title="Type"><i class="glyphicon glyphicon-user text-danger"></i></abbr><small> ' + item.type + '</small></a>';
+                        result += '<a class="list-group-item"><abbr title="region"><i class="glyphicon glyphicon-globe text-danger"></i></abbr><small> ' + item.region + ' region</small></a>';
                         result += '</ul>';
                         result += '</div>'; //panel
                         //result += '</div>'; //col-sm-6
