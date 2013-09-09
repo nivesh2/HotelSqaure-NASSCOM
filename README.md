@@ -1,5 +1,7 @@
 HotelSquare
 ========================
+See the site: http://bit.ly/hotelsquare
+Website is hosted on Windows Azure (Microsoft Cloud)
 This is an OpenSource Project, which uses OPEN DATA provided by the Government of India (data.gov.in). 
 
 Technologies used:
@@ -14,7 +16,7 @@ HotelSqaure API is also included in this repository, which is used by our Hotels
 We are very exticed to see amazing apps made by fellow developers with the help of API.
 API documentation on http://nivesh2.github.io/HotelSqaure-NASSCOM/
 
-
+Thanks to Microsoft Student Partners Program for providing free subscriptions to Windows Azure.
 
 =========================
 This is OpenSource Project is under MIT License (MIT)
