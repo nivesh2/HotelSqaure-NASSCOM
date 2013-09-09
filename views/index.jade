@@ -13,7 +13,7 @@ html
     link(rel='stylesheet', href='css/typeahead.js-bootstrap.css')
     link(href='css/bootstrap-glyphicons.css', rel='stylesheet')
     
-  body
+  body(style="display:none")
       nav.navbar.navbar-default.navbar-fixed-top.fade2.out#navbar(role='navigation')
         .navbar-header
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
@@ -120,6 +120,7 @@ html
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
     script(src='js/typeahead.min.js')
     script(type='text/javascript')   
+      $('body').show();
       $('.fade2').removeClass('out');
     script(src="js/hotelsquare.js")
     script(src="js/nprogress.js") 
