@@ -40,7 +40,11 @@ exports.findhotel = function(req, res) {
                     var newObj = new hotel_obj(hotel[i], i);
                     q.push(newObj);
                     continue;
-                }
+                }else if (hotel_array.type[i].match(name_temp)) {
+                    var newObj = new hotel_obj(hotel[i], i);
+                    q.push(newObj);
+                    continue;
+            }
             } catch (err) {
                 console.log("Catch error: " + err);
             }
