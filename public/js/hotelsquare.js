@@ -15,6 +15,7 @@
     });
 
     $input.focus(function(event) {
+      
         $('.alert-div').hide();
     });
 
@@ -368,7 +369,7 @@
                         result += '<a class="list-group-item"><abbr title="city"><i class="glyphicon glyphicon-map-marker text-danger"></i></abbr><small> ' + item.city + '</small></a>';
                         result += '<a class="list-group-item"><abbr title="state"><i class="glyphicon glyphicon-map-marker text-danger"></i></abbr><small> ' + item.state + '</small></a>';
                         result += '<a class="list-group-item"><abbr title="Type"><i class="glyphicon glyphicon-tag text-danger"></i></abbr><small> ' + item.type + '</small></a>';
-                        result += '<a class="list-group-item"><abbr title="rooms"><i class="glyphicon glyphicon-glass text-danger"></i></abbr><small> ' + item.region + ' region</small></a>';
+                        result += '<a class="list-group-item"><abbr title="region"><i class="glyphicon glyphicon-glass text-danger"></i></abbr><small> ' + item.region + ' region</small></a>';
                         result += '</ul>';
                         result += '</div>'; //panel
                         //result += '</div>'; //col-sm-6
@@ -397,7 +398,8 @@
                 result += '</div>';
                 NProgress.done();
                 $("#maintext").hide();
-                $("#mainnavbar").hide();
+                // $("#mainnavbar").hide();
+                $("#maininfo").hide();
                 $(".hotel-list").html(result);
 
                 $('#navbar').show();
@@ -431,18 +433,8 @@
                 .fail(function() {
                 NProgress.done();
 
-                    $('.alert-text').html('<strong>Sorry!</strong> Change a few things up and try submitting again.');
+                    $('.alert-text').html('<strong><i class="glyphicon glyphicon-exclamation-sign"></i> Opps</strong> Nothing found, try searching for other terms.');
                     $('.alert-div').show();
-
-                    // url_obj.target = target;
-                    // url_obj.text = text;
-
-                    // console.log("url_obj");
-                    // console.log(url_obj);
-                    // if (url_flag) {
-                    //     window.history.pushState(url_obj, target, '/search/' + target);
-                    // }
-                    // url_flag = true;
                 });
         }
         else{
