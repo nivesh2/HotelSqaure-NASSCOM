@@ -13,7 +13,7 @@ html
     link(rel='stylesheet', href='css/typeahead.js-bootstrap.css')
     link(href='css/bootstrap-glyphicons.css', rel='stylesheet')
     
-  body(style='display: none')
+  body
       nav.navbar.navbar-default.navbar-fixed-top.fade2.out#navbar(role='navigation')
         .navbar-header
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
@@ -48,11 +48,11 @@ html
     
     .my-main.my-height1#maintext
       
-        img.fade2.out(src="img/logo-taj.png", class="taj" ,style="cursor:pointer;")
-        h1#theme-color HotelSquare
+        img.fade2.out(src="img/logo-taj.png", class="taj")
+        h1.fade2.out#theme-color HotelSquare
         small.text-warning.fade2.out Find all Hotels and Travel Service Providers of india currently approved under Ministry of Tourism.
         br
-        small.text-warning.fade2.out 306 Hotels and 984 Travel service provides registered data as on as on 12.03.2013.
+        small.text-warning.fade2.out 306 Hotels and 984 Travel service providers registered data as on as on 12.03.2013.
         form.fade2.out(action='#', role="form")
                 .form-group
                     label.sr-only Sreach text          
@@ -98,12 +98,16 @@ html
             a.navbar-brand(href='http://data.gov.in/', target="blank")
                 img(src="/img/data.png",style="max-width:80px;" ,alt="")
         
-        .collapse.navbar-collapse.navbar-ex1-collapse
+        .collapse.navbar-collapse.navbar-ex2-collapse
             ul(class="nav navbar-nav navbar-right")  
               li
-                 a(href='http://tourism.gov.in/', target="blank") Data from Govt. Of Tourism India
+                 a(href='http://tourism.gov.in/', target="blank") Data from Ministry Of Tourism India
               li
                 img(src="/img/logo.png",style="max-height:40px;padding-top:15px" ,alt="")
+            //   li
+            //      a(href='http://nivesh2.github.io/HotelSqaure-NASSCOM/', target="blank") GitHUB
+            //   li
+            //     img(src="/img/git-logo2.png",style="max-height:40px;padding-top:15px" ,alt="")
               //- li.navlink
               //-   img(src="/img/data.png",style="max-width:80px;padding-top:18px" ,alt="")
     
@@ -116,7 +120,6 @@ html
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
     script(src='js/typeahead.min.js')
     script(type='text/javascript')   
-      $('body').show();
       $('.fade2').removeClass('out');
     script(src="js/hotelsquare.js")
     script(src="js/nprogress.js") 

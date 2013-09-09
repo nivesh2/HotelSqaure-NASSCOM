@@ -337,7 +337,6 @@
                 result += '</div>';
                 NProgress.done();
                 $("#maintext").hide();
-                // $("#mainnavbar").hide();
                 $("#maininfo").hide();
                 $(".hotel-list").html(result);
 
