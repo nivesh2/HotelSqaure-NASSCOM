@@ -12,7 +12,7 @@ Technologies used:
 
 HotelSqaure API is also included in this repository, which is used by our Hotelsqaure Android App. 
 We are very exticed to see amazing apps made by fellow developers with the help of API.
-API documentation to be updated soon.
+API documentation on http://nivesh2.github.io/HotelSqaure-NASSCOM/
 
 
 
