@@ -5,15 +5,14 @@ html
     meta(charset='utf-8')
     meta(name='description', content='indian hotel search')
     meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
-    link(rel='stylesheet', href='css/bootstrap.css')
-    link(href='css/bootstrap-glyphicons.css', rel='stylesheet')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic')  
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/nprogress/0.1.2/nprogress.min.css')   
     link(rel='stylesheet', href='css/my.css')
     link(rel='stylesheet', href='css/global.css')    
     link(rel='stylesheet', href='css/typeahead.js-bootstrap.css')
-    link(rel='stylesheet',href='http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css')
-    link(rel='stylesheet', href='css/nprogress.css')    
-    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic')    
-
+    link(href='css/bootstrap-glyphicons.css', rel='stylesheet')
+    
   body(style='display: none')
       nav.navbar.navbar-default.navbar-fixed-top.fade2.out#navbar(role='navigation')
         .navbar-header
@@ -49,7 +48,7 @@ html
     
     .my-main.my-height1#maintext
       
-        img.fade2.out(src="http://farm6.staticflickr.com/5442/9685944110_c3843d25e5_o.png", class="taj" ,style="cursor:pointer;")
+        img.fade2.out(src="img/logo-taj.png", class="taj" ,style="cursor:pointer;")
         h1#theme-color HotelSquare
         small.text-warning.fade2.out Find all Hotels and Travel Service Providers of india currently approved under Ministry of Tourism.
         br
@@ -116,23 +115,19 @@ html
 
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
     script(src="js/nprogress.js") 
-    script(type='text/javascript')
-      $('body').show();      
-      NProgress.start();
-    script(src='js/bootstrap.min.js')
     script(src='js/responsiveslides.min.js')      
-    
-    script(src='js/holder.js')
-    script(src='js/typeahead.js')
-    script(src="js/appear.js")         
-    script(src="js/hotelsquare.js")    
-    script(src='http://code.jquery.com/ui/1.10.3/jquery-ui.js')
-    script(type='text/javascript')
-      NProgress.set(0.8);
+    // script(src='js/bootstrap.min.js')
+    // script(src='js/holder.js')
+    // script(src='js/typeahead.min.js')
+    // script(src="js/appear.js")      
+    // script(src="js/jquery.stellar.min.js") 
+    script(src="js/default.js") 
+    script(src="js/hotelsquare.js")
     script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places")
-    script(src="http://www.google.com/jsapi") 
-    script(src="js/jquery.stellar.min.js") 
-
-    script(type='text/javascript')      
+    // script(src="http://www.google.com/jsapi") 
+    
+    script(type='text/javascript')   
+      $('body').show();
+      NProgress.start();
       NProgress.done();
       $('.fade2').removeClass('out'); 
