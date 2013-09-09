@@ -3,15 +3,16 @@ HotelSquare
 This is an OpenSource Project, which uses OPEN DATA provided by the Government of India (data.gov.in). 
 
 Technologies used:
-1. Node.js
-2. Express.js
-2. Javascript
-3. Bootstrap 3.0
-4. HTML5/CSS3
+1. Node.js,
+2. Express.js,
+2. Javascript,
+3. Bootstrap 3.0,
+4. HTML5/CSS3,
 5. JADE
 
 HotelSqaure API is also included in this repository, which is used by our Hotelsqaure Android App. 
-We are very exticed to see amazing apps made by new developers with the help of API. API documentation to be updated soon.
+We are very exticed to see amazing apps made by fellow developers with the help of API.
+API documentation to be updated soon.
 
 
 
