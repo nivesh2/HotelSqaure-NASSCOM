@@ -1,0 +1,208 @@
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+img.list-img{
+  max-width: 400px;
+  max-height: 300px;
+}
+.fade2 {
+  transition: all 300ms linear 700ms;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  -o-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  opacity: 1;
+}
+
+.fade2.out {
+  opacity: 0;
+}
+.card {
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+    -webkit-transform:  translate3d(0px, 100px, 0) rotateX(-30deg) scale(1.25, 1.25);
+    -moz-transform: translate3d(0px, 100px, 0) rotateX(-30deg) scale(1.25, 1.25);
+    transform: translate3d(0px, 100px, 0) rotateX(-30deg) scale(1.25, 1.25);
+    opacity: 0;
+
+}
+ 
+.card.appeared{
+    -webkit-transform: translate3d(0px, 0px, 0px) rotateX(0)  scale(1, 1);
+    -moz-transform:  translate3d(0px, 0px, 0px) rotateX(0)  scale(1, 1);
+    transform: translate3d(0px, 0px, 0px) rotateX(0)  scale(1, 1);
+    opacity: 1;
+}
+
+.photo {
+      background-attachment: fixed;
+      background-position: 50% 0;
+      background-repeat: no-repeat;
+      height: 250px;
+      
+      /*background-size:100% 100%;*/
+      position: relative;
+      
+      
+    }
+    p{
+      text-align:justify;
+    }
+.photo span {
+      bottom: 0;
+      color: white;
+      display: block;
+      width:100%;
+      text-align: center;
+      padding-bottom: 10px;
+      position: absolute;
+    
+      
+      font-size: 25px;
+      font-weight: lighter;
+      font-family: source sans pro, sans-serif; 
+    }
+.ptaj {
+      background-image: url('http://farm4.staticflickr.com/3824/9682666365_89bfd655ed_b.jpg');
+
+    }
+.pdrive {
+      background-image: url('http://farm8.staticflickr.com/7394/9685900126_c2b1458e52_b.jpg');
+      height:580px;
+
+    }
+.my-height2{
+      text-align: center;
+      color: white;
+      font-weight: lighter;
+      font-family: source sans pro, sans-serif; 
+
+}
+.my-height2 h1{
+      /*font-weight: lighter;*/
+      font-family: source sans pro, sans-serif; 
+}
+
+.my-height2 h3{
+      /*font-weight: lighter;*/
+      font-family: source sans pro, sans-serif; 
+}
+
+.my-height2 p{
+    padding-left: 10px;
+    padding-right: 10px;  
+    text-align: center;
+    color:black; 
+}
+.profile img{
+   margin-bottom: 10px;
+   max-width: 150px;
+   max-height: 150px;
+}
+
+p.justify{
+  text-align: justify;
+}
+
+.profile p{
+  color:white;
+  text-align: center;
+  /*text-shadow: 0 2px 0 black, 0 0 10px black;*/
+ /*text-shadow: black 0.1em 0.1em 0.2em;*/
+ font-size:20px;
+ font-weight: normal;
+  }
+  .profile img{
+    max-height: 100px;
+    max-width: 100px;
+  }
+
+  h2.about-heading{
+    color:black; 
+    font-family: source sans pro, sans-serif; 
+    font-weight: lighter;
+    font-size: 20px;
+
+  }
+
+
+
+
+@media screen and (min-width: 768px) {
+    img.list-img{
+    max-width: 400px;
+    max-height: 300px;
+   }
+
+    
+    .photo{
+      height:450px;
+    }
+    .photo span{
+      font-size: 60px;
+    }
+    .pdrive {
+      
+      height:400px;
+
+    }
+
+  h2.about-heading{
+    
+    font-size: 30px;
+
+  }
+  .profile p{
+ text-shadow: black 0.1em 0.1em 0.2em;
+ font-size:30px;
+ font-weight: normal;
+
+  }
+
+  .profile img{
+    max-height: 150px;
+    max-width: 150px;
+  }
+  .ptaj {
+      background-image: url('http://farm4.staticflickr.com/3762/9685883620_ab993404c8_o.jpg');
+
+    }
+.pdrive {
+      background-image: url('http://farm6.staticflickr.com/5333/9682642757_190ed84ac0_o.jpg');
+      height:400px;
+
+    }
+
+
+   }

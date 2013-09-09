@@ -1,0 +1,110 @@
+doctype html
+html
+  head
+    title HotelSquare
+    meta(charset='utf-8')
+    meta(name='description', content='indian hotel search')
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+    link(rel='stylesheet', href='http://hotelsquare.azurewebsites.net/css/bootstrap.css')
+    link(href='http://hotelsquare.azurewebsites.net/css/bootstrap-glyphicons.css', rel='stylesheet')
+    link(rel='stylesheet', href='http://hotelsquare.azurewebsites.net/css/newmy.css')
+    link(rel='stylesheet', href='http://hotelsquare.azurewebsites.net/css/global.css')
+    link(rel='stylesheet', href='http://hotelsquare.azurewebsites.net/css/typeahead.js-bootstrap.css')
+    link(rel='stylesheet',href='http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css')
+    link(rel='stylesheet', href='http://hotelsquare.azurewebsites.net/css/nprogress.css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic')    
+
+
+  body
+      nav.navbar.navbar-default.navbar-fixed-top#navbar(role='navigation')
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+                  span.sr-only Toggle navigation
+                  span.icon-bar
+                  span.icon-bar
+                  span.icon-bar
+
+          a.navbar-brand(href='/')
+              //img.rotate(src="/ico/send.png")
+              span.label.label-info.myfont HotelSquare
+          
+        .collapse.navbar-collapse.navbar-ex1-collapse
+            
+               
+            form.navbar-form.navbar-left(role='search')
+                  .form-group
+                     input.typeahead.form-control.glowing-border.nav-search.target(type='text', name='searchbox',placeholder='Search', value= "#{newtarget}") 
+                  button.search-button(type="button", class="btn btn-info") Submit
+      
+                 
+            ul(class="nav navbar-nav navbar-right")  
+              li.navlink
+                 a#navlink(href='/hotel.html') Hotels
+              li.navlink
+                 a#navlink(href='/agent.html') Agents
+              li.navlink
+                 a#navlink(href='/about.html') About Us
+
+  
+
+    
+    .my-main.my-height1#maintext
+        img(src="/img/logo-taj.png", style="cursor:pointer;")
+        h1#theme-color HotelSquare
+        form.form-inline(action='#')
+          .row
+            .col-lg-6.col-md-8.col-sm-8.col-sm-offset-2.col-md-offset-2.col-lg-offset-3
+                label.sr-only Sreach text          
+                .input-group
+                  span.input-group-btn
+                        button.btn.btn-info.search-button(type='button')
+                            i.glyphicon.glyphicon-search
+                  input.typeahead.form-control.glowing-border.target(type='text', name='searchbox', ,placeholder='Enter Hotel Name or City or State')
+                  span.input-group-btn                  
+                        button.btn.btn-info.dropdown-toggle(type='button',data-toggle="dropdown", id="search-type" ) Hotels  
+                            span.caret
+                        ul.dropdown-menu.search-list 
+                          li
+                            a.search-select(href="#") Search Hotel
+                          li
+                            a.search-select(href="#") Search Travel Agents
+
+
+
+
+        footer
+              h3
+                a.label.label-warning(href="http://tourism.gov.in/", target="blank") Open Data from Ministry of Tourism, Govt. of India-2013
+
+    
+    .alert-div
+       .row
+          .col-lg-6.col-md-8.col-sm-8.col-sm-offset-2.col-md-offset-2.col-lg-offset-3
+              .alert.alert-danger.alert-text
+                
+                  
+                  
+
+    .hotel-list#search
+
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(src="http://hotelsquare.azurewebsites.net/js/nprogress.js") 
+    script(src='http://hotelsquare.azurewebsites.net/js/bootstrap.min.js')
+    script(src='http://hotelsquare.azurewebsites.net/js/responsiveslides.min.js')      
+    script(type='text/javascript')
+      $('body').show();      
+      NProgress.start();
+    script(src='http://code.jquery.com/ui/1.10.3/jquery-ui.js')
+    script(src='http://hotelsquare.azurewebsites.net/js/holder.js')
+    script(src='http://hotelsquare.azurewebsites.net/js/typeahead.js')
+    script(src="http://hotelsquare.azurewebsites.net/js/appear.js")     
+    script(src="http://hotelsquare.azurewebsites.net/js/hotelsquare.js") 
+    script(src="http://hotelsquare.azurewebsites.net/js/jquery.stellar.min.js")        
+    script(type='text/javascript')
+      NProgress.set(0.8);
+    script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places")
+    script(src="http://www.google.com/jsapi") 
+    
+    script(type='text/javascript')      
+      NProgress.done();
+      
