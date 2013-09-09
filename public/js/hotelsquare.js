@@ -406,12 +406,14 @@
     });
     $(document).on('hidden.bs.modal', modal_name, function(event) {
         $('#status' + list_id).text('loading map...');
+        $(".modal").mCustomScrollbar("destroy");
         $('#status' + list_id).width('0%');
         $(".status" + list_id).show(200);
     });
     $(document).on('shown.bs.modal', modal_name, function(event) {
         console.log('loading map--------------');
         $("#status" + list_id).width("80%");
+        $(".modal").mCustomScrollbar();
         searchtime = 0;
         codeAddress(obj[list_id].name, obj[list_id].address);
     });
