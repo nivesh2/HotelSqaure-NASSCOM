@@ -23,74 +23,45 @@
     $('li.navlink').click(function(e) {
         e.preventDefault();
         var href = $(this).children().attr('href');
-        console.log(href);
-
-        // $(this).addClass('active')
-        //     .siblings('li')
-        //     .removeClass('active')
+        
 
         if (href == '/hotel.html') {
             $('#search-type').text('Hotels');
-
             getsearch();
-
-
         } else if (href == '/agent.html') {
             $('#search-type').text('Travel Agents');
-
             getsearch();
-
         } else {
-
             $('li.navlink').removeClass('active');
             $('a[href="/about.html"]').parent().addClass('active');
-
             $('.hotel-list').empty();
             $('.hotel-list').hide();
             $('.alert-div').hide();
-
-
-
             $('.hotel-list').load(href + ' .about');
             $('.hotel-list').show();
             $.stellar({
                 horizontalScrolling: false,
                 verticalOffset: 40
             });
-    
-
-
             url_obj.target = "about";
             url_obj.text = "Hotels";
-
             window.history.pushState(url_obj, '', "/search/"+url_obj.target);
-        }
-
+            }
     });
-
-
-
-
-
     window.onpopstate = function(e) {
         console.log("onpopstate called");
-
         if (e.state) {
-            console.log('going back');
-
+          
             $('#search-type').text(e.state.text);
             target = e.state.target;
-            console.log("target: " + target);
+         
             if (target == "home") {
-
-                console.log("going home");
+               
                 window.location.href = 'http://hotelsquare.azurewebsites.net/';
             } else if (target == "about") {
-                console.log('going to about');
-
+               
                 $('li.navlink').removeClass('active');
                 $('a[href="/about.html"]').parent().addClass('active');
-
                 $('.hotel-list').empty();
                 $('.hotel-list').hide();
                 $('.alert-div').hide();
@@ -100,32 +71,21 @@
                 url_flag = false;
                 getsearch();
             }
-
         } else {
-
-
             if (target=="") {
                 console.log('value empty');                
             }
             else if (target != "about") {
-                console.log('value:');
-                console.log(target);
-                console.log('value not empty');
+                
                 url_obj.target = "home";
                 url_obj.text = "Hotels";
-                console.log(url_obj);
+               
                 window.history.pushState(url_obj, '', '');
-
-
                 getsearch();
-
             } 
             else if(target == "about") {
-                
-
                 $('li.navlink').removeClass('active');
                 $('a[href="/about.html"]').parent().addClass('active');
-
                 $('.hotel-list').empty();
                 $('.hotel-list').hide();
                 $('.alert-div').hide();
@@ -135,51 +95,36 @@
                     horizontalScrolling: false,
                     verticalOffset: 40
                 });
-
                 url_obj.target = "about";
                 url_obj.text = "Hotels";
-
                 window.history.pushState(url_obj, '', "/search/"+url_obj.target);
-
-
             }
-
         }
-
     };
     $('.search-select').click(function(e) {
         e.preventDefault();
         if ($(this).text() === "Search Hotel") {
             $('#search-type').html('Hotels <span class="caret"></span>');
-
         } else {
             $('#search-type').html('Travel Agents <span class="caret"></span>');
-
         }
-
     });
     $input.change(function() {
-        console.log('text changed ');
         $('.target').val($(this).val());
         target = ($(this).val());
-
         if(enter_pressed==true){
             getsearch();
-        }
-        
+            }
     });
 
     $input.keydown(function(event) {
         var key = event.keyCode;
-        console.log('KeyCode: ' + key);
         if (key == 13) {
-            console.log("keycode enter pressed")
             enter_pressed=true;
         }
     });
 
     $('.search-button').click(function() {
-        console.log('button clicked');
         getsearch();
 
     });
@@ -192,9 +137,7 @@
 
         var text = $('#search-type').text();
 
-        console.log(window.location);
         if (target != "") {
-            console.log('searching' + target);
             if (text.length <= 8) {
                 url = '/hotel?id=' + target;
                 $('li.navlink').removeClass('active');
@@ -205,16 +148,11 @@
                 $('a[href="/agent.html"]').parent().addClass('active');
             }
             $search.hide();
-            console.log(url);
-
             $('.alert-div').hide();
             $.getJSON(url, function(data) {
                 obj = data;
-                console.log(data);
-
                 result += '<div class="row">';
                 result += '<div class="col-md-6 col-sm-8 col-xs-11 col-lg-6 col-md-offset-3 col-sm-offset-2 col-lg-offset-3">';
-
                 result += '<ul class="map-ul" style="list-style-type:none">'
                 $.each(data, function(i, item) {
                     if (text.length <= 8) {
@@ -412,7 +350,6 @@
                 $('dd').hide();
                 Holder.run();
                 $(document).on('appear', '.card', function(event) {
-                console.log("appered");
                 $(this).addClass("appeared");
                 });
                 $('.card').appear({force_process: true});
@@ -421,22 +358,12 @@
 
                     url_obj.target = target;
                     url_obj.text = text;
-
-                    console.log("url_obj");
-                    console.log(url_obj);
-
                     window.history.pushState(url_obj, target, '/search/' + target);
                 };
                 url_flag = true;
-                //    initialize();
-
-                // codeAddress("");
-
-
             })
                 .fail(function() {
                 NProgress.done();
-
                     $('.alert-text').html('<strong><i class="glyphicon glyphicon-exclamation-sign"></i> Opps</strong> Nothing found, try searching for other terms.');
                     $('.alert-div').show();
                 });
@@ -445,23 +372,16 @@
 
                 $('.alert-text').html('<strong>Opps!</strong> search is empty.');
                 $('.alert-div').show();
-
                 NProgress.done();
         }
-        
         enter_pressed=false;
     };
 
 
     jQuery('.typeahead').on('typeahead:selected', function(e, datum) {
-
         target = (datum.value);
-        console.log('typeahead pressed: ' + target);
         getsearch();
-
     });
-
-
     $('.typeahead').typeahead([{
         name: 'city',
         prefetch: '../json/city.json',
@@ -477,15 +397,6 @@
         prefetch: '../json/state.json',
         ttl: 0,
     }]);
-
-
-
-
-
-
-
-
-
     var geocoder;
     var map;
     var list_id;
@@ -493,49 +404,35 @@
     $(document).on('click', 'div.media', function(event) {
         list_id = parseInt($(this).attr('name'));
         modal_name = "#a" + list_id;
-
     });
     $(document).on('hidden.bs.modal', modal_name, function(event) {
         $('#status' + list_id).text('loading map...');
         $('#status' + list_id).width('0%');
         $(".status" + list_id).show(200);
-
     });
     $(document).on('shown.bs.modal', modal_name, function(event) {
         console.log('loading map--------------');
         $("#status" + list_id).width("80%");
         searchtime = 0;
         codeAddress(obj[list_id].name, obj[list_id].address);
-
     });
-
-
     var service;
-
     function initialize() {
         geocoder = new google.maps.Geocoder();
         var latlng = new google.maps.LatLng(-34.397, 150.644);
         var mapOptions = {
             zoom: 18,
             mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-
+            }
         map = new google.maps.Map(document.getElementById("map" + list_id), mapOptions);
         console.log('initialising map--------------');
-
     };
     var searchtime = 0;
     var add = '';
-
-
-
-
     function codeAddress(name, address) {
         initialize();
-
         console.log(name + ',' + address);
         var pyrmont = new google.maps.LatLng(-33.8665433, 151.1956316);
-        console.log(status);
         //  console.log(results[0]);
         var request = {
             location: pyrmont,
@@ -545,36 +442,26 @@
         service = new google.maps.places.PlacesService(map);
         service.textSearch(request, callback);
     };
-
-
     function callback(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
             //for (var i = 0; i < results.length; i++) {
             //var place = results[i];
             $("#status" + list_id).width("100%");
             createMarker(results[0]);
-            console.log('found : ' + results[0]);
-            console.log('success :' + status);
             map.setCenter(results[0].geometry.location);
             var req = {
                 reference: results[0].reference
             };
             service.getDetails(req, callback2);
             $(".status" + list_id).hide();
-
-
         } else {
             $("#status" + list_id).width("90%");
-            console.log(status);
             if (searchtime++ < 2) {
                 geocoder.geocode({
                     'address': obj[list_id].address
                 }, function(results, status) {
                     if (status == google.maps.GeocoderStatus.OK) {
-                        console.log(results[0].geometry.location);
                         var pyrmont = results[0].geometry.location; //new google.maps.LatLng(-33.8665433,151.1956316);
-                        console.log(status);
-                        console.log(results[0]);
                         var request = {
                             location: pyrmont,
                             radius: '500',
@@ -593,35 +480,24 @@
 
         }
     };
-
-
     function callback2(result, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
-            console.log("details: ");
-            console.log(result);
+          
             var photoid = "#photos" + list_id;
-
             var photos = result.photos;
-
             if ($(photoid + ' > li').length == 0) {
-
-
-
                 for (var i = 0; i < photos.length; i++) {
-                    console.log("inside photos");
+                    
                     $(photoid).append('<li><img src="' + photos[i].getUrl({
                         'maxWidth': 400,
                         'maxHeight': 300
                     }) + '" class="img-responsive list-img" alt="Unable to load image" ></li>');
                 }
                 $(".rslides").responsiveSlides();
-                console.log("image inserted")
+                
             }
-
         }
     };
-
-
     function createMarker(place) {
         var placeLoc = place.geometry.location;
         var marker = new google.maps.Marker({
@@ -630,12 +506,10 @@
         });
         var infowindow = new google.maps.InfoWindow();
         map.setCenter(placeLoc);
-
         google.maps.event.addListener(marker, 'click', function() {
             infowindow.setContent(place.name);
             infowindow.open(map, this);
         });
-        console.log('marker created success')
     };
 
 })();
