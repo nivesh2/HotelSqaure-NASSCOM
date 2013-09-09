@@ -6,6 +6,7 @@
     var url_obj = {};
     var url_flag = true;
     var enter_pressed=false;
+    var home=true;
 
 
 
@@ -403,6 +404,9 @@
                 $(".hotel-list").html(result);
 
                 $('#navbar').show();
+                if(home==true){
+                home=false;
+                }
                 $('.target').val(target);
                 $search.show();
                 $('dd').hide();
