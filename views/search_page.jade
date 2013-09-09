@@ -72,20 +72,33 @@ html
 
 
 
-        footer
-              h3
-                a.label.label-warning(href="http://tourism.gov.in/", target="blank") Open Data from Ministry of Tourism, Govt. of India-2013
-
-    
     .alert-div
        .row
           .col-lg-6.col-md-8.col-sm-8.col-sm-offset-2.col-md-offset-2.col-lg-offset-3
               .alert.alert-danger.alert-text
-                
-                  
-                  
-
+    
     .hotel-list#search
+    
+    nav.navbar.navbar-inverse.navbar-fixed-bottom.fade2.out#mainnavbar(role='navigation')
+        .navbar-header
+          //- button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+                  span.sr-only Toggle navigation
+                  span.icon-bar
+                  span.icon-bar
+                  span.icon-bar
+
+          a.navbar-brand(href='http://data.gov.in/', target="blank")
+                img(src="/img/data.png",style="max-width:80px;" ,alt="")
+        
+        .collapse.navbar-collapse.navbar-ex1-collapse
+            ul(class="nav navbar-nav navbar-right")  
+              li
+                 a(href='http://tourism.gov.in/', target="blank") Data from Govt. Of Tourism India
+              li
+                img(src="/img/logo.png",style="max-height:40px;padding-top:15px" ,alt="")
+              //- li.navlink
+              //-   img(src="/img/data.png",style="max-width:80px;padding-top:18px" ,alt="")
+
 
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
     script(src="http://hotelsquare.azurewebsites.net/js/nprogress.js") 

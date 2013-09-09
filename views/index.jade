@@ -15,7 +15,7 @@ html
     link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic')    
 
   body(style='display: none')
-      nav.navbar.navbar-default.navbar-fixed-top#navbar(role='navigation')
+      nav.navbar.navbar-default.navbar-fixed-top.fade2.out#navbar(role='navigation')
         .navbar-header
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
                   span.sr-only Toggle navigation
@@ -51,6 +51,9 @@ html
       
         img.fade2.out(src="http://farm6.staticflickr.com/5442/9685944110_c3843d25e5_o.png", class="taj" ,style="cursor:pointer;")
         h1#theme-color HotelSquare
+        small.text-warning.fade2.out Find all Hotels and Travel Service Providers of india currently approved under Ministry of Tourism.
+        br
+        small.text-warning.fade2.out 306 Hotels and 984 Travel service provides registered data as on as on 12.03.2013.
         form.fade2.out(action='#', role="form")
                 .form-group
                     label.sr-only Sreach text          
@@ -80,23 +83,20 @@ html
                             a.search-select(href="#") Search Hotel
                           li
                             a.search-select(href="#") Search Travel Agents
+        
+    
+    
+    .alert-div
+       .row
+          .col-lg-6.col-md-8.col-sm-8.col-sm-offset-2.col-md-offset-2.col-lg-offset-3
+              .alert.alert-danger.alert-text
 
 
-
-
-        //- footer
-              h3
-                a.label.label-warning(href="http://tourism.gov.in/", target="blank") Open Data from Ministry of Tourism, Govt. of India-2013
-
+    
+    
     nav.navbar.navbar-inverse.navbar-fixed-bottom.fade2.out#mainnavbar(role='navigation')
         .navbar-header
-          //- button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
-                  span.sr-only Toggle navigation
-                  span.icon-bar
-                  span.icon-bar
-                  span.icon-bar
-
-          a.navbar-brand(href='http://data.gov.in/', target="blank")
+            a.navbar-brand(href='http://data.gov.in/', target="blank")
                 img(src="/img/data.png",style="max-width:80px;" ,alt="")
         
         .collapse.navbar-collapse.navbar-ex1-collapse
@@ -107,16 +107,12 @@ html
                 img(src="/img/logo.png",style="max-height:40px;padding-top:15px" ,alt="")
               //- li.navlink
               //-   img(src="/img/data.png",style="max-width:80px;padding-top:18px" ,alt="")
-
-
-    .alert-div
-       .row
-          .col-lg-6.col-md-8.col-sm-8.col-sm-offset-2.col-md-offset-2.col-lg-offset-3
-              .alert.alert-danger.alert-text               
-                  
-                  
-
+    
     .hotel-list#search
+    
+
+
+   
 
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
     script(src="js/nprogress.js") 
