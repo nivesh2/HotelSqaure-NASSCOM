@@ -1,11 +1,11 @@
 # This is HotelSquare Website Repository
 ========================
 
-## HotelSqaure Native Android App repository [click here](https://github.com/Rahul9936/hotelsqaure)
+## Android App repository [click here](https://github.com/Rahul9936/hotelsqaure)
 
 ## HotelSqaure API Documentation [click here](http://hotelapi.azurewebsites.net/)
 
-
+## [Website](http://hotelsquare.azurewebsites.net/)
 
 
 
