@@ -1,22 +1,21 @@
-HotelSquare
+# This is HotelSquare Website Repository
 ========================
-See the site: http://bit.ly/hotelsquare
-Website is hosted on Windows Azure (Microsoft Cloud)
-This is an OpenSource Project, which uses OPEN DATA provided by the Government of India (data.gov.in). 
 
-Technologies used:
-1. Node.js,
-2. Express.js,
-2. Javascript,
-3. Bootstrap 3.0,
-4. HTML5/CSS3,
-5. JADE
+## HotelSqaure Native Android App repository [click here](https://github.com/Rahul9936/hotelsqaure)
 
-HotelSqaure API is also included in this repository, which is used by our Hotelsqaure Android App. 
-We are very exticed to see amazing apps made by fellow developers with the help of API.
-API documentation on http://nivesh2.github.io/HotelSqaure-NASSCOM/
+## HotelSqaure API Documentation [click here](http://hotelapi.azurewebsites.net/)
 
-Thanks to Microsoft Student Partners Program for providing free subscriptions to Windows Azure.
+
+
+
+
+
+
+
+
+
+
+
 
 =========================
 This is OpenSource Project is under MIT License (MIT)
