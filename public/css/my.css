@@ -3,19 +3,9 @@
     margin-left: 1.5em;
 
 }
-html {
-
-    /*background: url("/img/bg.jpg") no-repeat center center fixed;*/
-    /*-webkit-background-size: cover;*/
-    /*-moz-background-size: cover;*/
-    /*-o-background-size: cover;*/
-    /*background-size: cover;*/
-}
-
 body{
     padding-bottom: 20px;
     background-color: transparent;
-    
 }
 .alert-div{
     padding-top: 125px;
@@ -40,8 +30,6 @@ body{
 #holder {
     position:relative;
 }
-
-
 footer{
 
     position:fixed;
@@ -136,17 +124,6 @@ footer{
     max-height:150px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (min-width: 768px) {
 
     .taj{
@@ -168,9 +145,6 @@ footer{
         padding-top: 70px;
         display:none;
     }
-   /* .my-height2{
-        padding-top: 70px;
-    }*/
     .myfont{
         font-size: large;
     }
@@ -178,12 +152,7 @@ footer{
     .my-height1{
     margin-top: 8em;
     }   
-
-
 }
-
 .hide{
     display: hide;
 }
-
-
