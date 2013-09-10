@@ -5,8 +5,10 @@
 
 ## HotelSqaure API Documentation [click here](http://hotelapi.azurewebsites.net/)
 
-## Visit [Website](http://hotelsquare.azurewebsites.net/)
+## Visit Our [Website](http://hotelsquare.azurewebsites.net/)
 
+## Youtube Demo link [here](http://www.youtube.com/watch?v=HsbECTDf7ms&edit=vd)
+This contains both demos Anroid App and Website demo.
 
 
 
