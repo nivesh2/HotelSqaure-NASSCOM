@@ -48,8 +48,59 @@ html
                  a#navlink(href='/agent.html') Agents
               li.navlink
                  a#navlink(href='/about.html') About Us
-
-  
+              li
+                 a(data-toggle="modal", href="#myModal2") Register
+                
+                 
+                 
+    .modal.fade#myModal2(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+        .modal-dialog
+            .modal-content
+              .modal-header
+                button.close(type='button', data-dismiss='modal', aria-hidden='true') &times;
+                h4.modal-title Hotel Registration
+              .modal-body
+                form(role='form')
+                    .form-group
+                        label Name
+                        input.form-control(type='text', id='name', placeholder='Name of Hotel', required="required")
+                    .form-group
+                        label Address
+                        input.form-control(type='text', id='address', placeholder='Address', required="required")
+                    .form-group
+                        label State
+                        input.form-control(type='text', id='state', placeholder='State', required="required")
+                    .form-group
+                        label phone
+                        input.form-control(type='tel', id='phone', placeholder='Phone number', required="required")
+                    .form-group
+                        label fax
+                        input.form-control(type='tel', id='fax', placeholder='fax', required="required")
+                    .form-group
+                        label website
+                        input.form-control(type='url',id='website', placeholder='www.example.com', required="required")
+                    .form-group
+                        label Hotel type
+                        input.form-control(type='text', id='type', placeholder='5 Star', required="required")
+                    .form-group
+                        label room
+                        input.form-control(type='number', id='room', placeholder='200', required="required")
+                    .form-group
+                        label email
+                        input.form-control(type='email', id='email', placeholder='hotel@domain.com', required="required")
+                    .form-group
+                        label city
+                        input.form-control(type='text', id='city', placeholder='City', required="required")
+                    
+                    button.btn.btn-default(type='button', data-dismiss='modal') Close
+                    
+                    button.btn.btn-primary#savedata Submit
+                
+              .modal-footer
+                    p This is only for demo purpose, showing that hotels can register directly from our portal. Need governments approval for verification of data.
+                
+                
+     
 
     
     .my-main.my-height1#maintext
@@ -122,7 +173,7 @@ html
 
 
    
-
+    script(src="https://hotelsquare.azure-mobile.net/client/MobileServices.Web-1.0.0.min.js")
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
     script(src='js/typeahead.min.js')
     script(type='text/javascript')   

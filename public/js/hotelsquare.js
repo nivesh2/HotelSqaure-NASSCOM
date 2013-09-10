@@ -10,6 +10,26 @@
 
 
 
+    var client = new WindowsAzure.MobileServiceClient( 
+            "https://hotelsquare.azure-mobile.net/", 
+            "wECCqZFPRNQEaFUtpAOrJANmqwJWqK50"
+    ); 
+         
+      
+    console.log(client); 
+      
+    $(document).on('click', '#savedata', function(event) { 
+    
+    if($("#name").val() != "" && $("#add").val()!="" && $("#website").val()!="" ){
+            var item = { name:$("#name").val(), address:$("#add").val() , state:$("#state").val(), phone : $("#phone").val(),fax:$("#fax").val(),website:$("#website").val(),type:$("#type").val(),room:$("#room").val(),email:$("#email").val(),city:$("#city").val()}; 
+            console.log(item); 
+            client.getTable("Item").insert(item); 
+               console.log("save"); 
+            alert("done");
+    }
+    }); 
+
+
     $(document).on('click', 'button.close', function() {
         var name = '#' + $(this).attr('name');
         $(name).modal('hide');
@@ -157,7 +177,7 @@
                 $.each(data, function(i, item) {
                     if (text.length <= 8) {
                         result += '<li id="list-head" >';
-                        result +='<div class="thumbnail card">';
+                        result += '<div class="thumbnail card">';
                         result += '<div data-toggle="modal" href="#a' + i + '" class="media" style="cursor:pointer" name=' + i + '>';
                         result += '<a  class="pull-left">';
                         result += '<img data-src="holder.js/5x100/text: " alt="">';
