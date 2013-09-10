@@ -5,7 +5,7 @@
 
 ## HotelSqaure API Documentation [click here](http://hotelapi.azurewebsites.net/)
 
-## [Website](http://hotelsquare.azurewebsites.net/)
+## Visit [Website](http://hotelsquare.azurewebsites.net/)
 
 
 
