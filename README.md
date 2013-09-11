@@ -1,13 +1,12 @@
-# This is HotelSquare Website Repository
+# This is HotelSquare [Website](http://hotelsquare.azurewebsites.net/) Repository
 ========================
 
 ## Android App repository [click here](https://github.com/Rahul9936/hotelsqaure)
 
 ## HotelSqaure API Documentation [click here](http://hotelapi.azurewebsites.net/)
 
-## Visit Our [Website](http://hotelsquare.azurewebsites.net/)
-
 ## Youtube Demo link [here](http://www.youtube.com/watch?v=HsbECTDf7ms&edit=vd)
+
 This contains both demos Anroid App and Website demo.
 
 
