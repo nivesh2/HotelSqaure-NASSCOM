@@ -1,0 +1,27 @@
+{
+  "name": "hotelsqaure",
+  "version": "0.0.1",
+  "description": "hotelsqaure backend server",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~3.3.5",
+    "jade": "~0.34.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nivesh2/HotelSqaure-NASSCOM.git"
+  },
+  "keywords": [
+    "hotelsqaure"
+  ],
+  "author": "nivesh singh",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/nivesh2/HotelSqaure-NASSCOM/issues"
+  }
+}
