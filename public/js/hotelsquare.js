@@ -10,12 +10,15 @@
 
 
 
-    var client = new WindowsAzure.MobileServiceClient( 
-            "https://hotelsquare.azure-mobile.net/", 
-            "wECCqZFPRNQEaFUtpAOrJANmqwJWqK50"
-    ); 
-         
-      
+  /* var client = new WindowsAzure.MobileServiceClient(
+    "https://hotellist.azure-mobile.net/",
+    "ztUJQtRDQafvswiNAMkYfQHWWnhzHp35"
+   );
+ */
+ var client = new WindowsAzure.MobileServiceClient(
+     'https://hotellist.azure-mobile.net/', 
+     'ztUJQtRDQafvswiNAMkYfQHWWnhzHp35'),
+        todoItemTable = client.getTable('todoitem');
     console.log(client); 
       
     $(document).on('click', '#savedata', function(event) { 
@@ -23,11 +26,14 @@
     if($("#name").val() != "" && $("#add").val()!="" && $("#website").val()!="" ){
             var item = { name:$("#name").val(), address:$("#add").val() , state:$("#state").val(), phone : $("#phone").val(),fax:$("#fax").val(),website:$("#website").val(),type:$("#type").val(),room:$("#room").val(),email:$("#email").val(),city:$("#city").val()}; 
             console.log(item); 
-            client.getTable("Item").insert(item); 
-               console.log("save"); 
-            alert("done");
+            client.getTable("TodoItem").insert(item); 
+               console.log("save");
+               console.log(todoItemTable);
+               alert("save");
+           
     }
     }); 
+   
 
 
     $(document).on('click', 'button.close', function() {
